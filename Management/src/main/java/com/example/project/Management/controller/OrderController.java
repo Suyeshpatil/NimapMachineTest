@@ -61,13 +61,13 @@ public class OrderController {
 		return productRepository.findById(pid);
 	}
 	
-	//product deleted
+	//product deleting
 	@DeleteMapping("/pdel{pid}")
 	public String delete(@PathVariable int pid){
 		productRepository.deleteById(pid);
 		return "Product record deleted successfuly...";
 	}
-	//customer deleted
+	//Category Deleting
 	@DeleteMapping("/cdel{id}")
 	public String delete_category(@PathVariable int id){
 		categoryRepository.deleteById(id);
